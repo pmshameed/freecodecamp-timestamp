@@ -26,7 +26,8 @@ app.get("/api/hello", function (req, res) {
 
 
 
-// Listen on port set in environment variable or default to 3000
-var listener = app.listen(process.env.PORT || 3000, function () {
+// Listen on port set in environment variable or default to 5000
+// Bind to 0.0.0.0 for Replit environment
+var listener = app.listen(process.env.PORT || 5000, '0.0.0.0', function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
